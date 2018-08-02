@@ -83,7 +83,7 @@ class Create extends Component {
 
     // generate a 'clean' representation of the categories for use as custom data fields
     Object.keys(this.state.selectedCategories).map(inputKey => {
-      const categoryKey = `Catégorie ${inputKey}`
+      const categoryKey = `Category ${inputKey}`
       return customDataObject[categoryKey] = this.state.selectedCategories[inputKey].category.categoryName
     })
 
@@ -212,7 +212,7 @@ class Create extends Component {
                   <Label>Categorie(s)</Label>
                   <Input defaultValue="" type="select" name="select" id="exampleSelect" onChange={(e) => this.handleCategorySelect(e, 0)}>
                     {/* This is the first category dropdown, which represents the 1st level of categories (from the root node) */}
-                    <option disabled value="" key="none">(sélectionner)</option>
+                    <option disabled value="" key="none">(selection)</option>
                     {this.state.ebayCategoryMap.rootCategoryNode ?
                       this.state.ebayCategoryMap.rootCategoryNode.childCategoryTreeNodes.map((categoryObject, index) => {
                         return (<option value={categoryObject.category.categoryId} key={index}>{categoryObject.category.categoryName}</option>)
@@ -240,7 +240,7 @@ class Create extends Component {
               <FormGroup>
                 <Label>
                   Certification(s)
-                  <Link style={{marginLeft: "10px"}} to="/createcertification">Créer +</Link>
+                  <Link style={{marginLeft: "10px"}} to="/createcertification">Create +</Link>
                 </Label>
                 <div>
                   {
@@ -255,7 +255,7 @@ class Create extends Component {
                       :
                       <div style={{marginLeft:"15px"}}>
                         No certification available.
-                        <Link style={{marginLeft: "10px"}} to="/createcertification">Create a certification</Link>
+                        <Link style={{marginLeft: "10px"}} to="/createcertification">Create the first certification</Link>
                       </div>
                   }
                 </div>
@@ -265,8 +265,8 @@ class Create extends Component {
                   // displays all custom data fields from the state
                   Object.keys(this.state.customDataInputs).map(inputKey =>
                     <FormGroup style={{display:"flex"}} key={inputKey}>
-                      <Input value={this.state.customDataInputs[inputKey].key} placeholder="Propriété (par exemple, «Couleur»)" style={{flex: 1, marginRight:"15px"}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], key: e.target.value} }})}}/>
-                      <Input value={this.state.customDataInputs[inputKey].value} placeholder="Valeur (par exemple, «Rouge»)" style={{flex: 1}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], value: e.target.value} }})}}/>
+                      <Input value={this.state.customDataInputs[inputKey].key} placeholder="Property (for example, «Color»)" style={{flex: 1, marginRight:"15px"}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], key: e.target.value} }})}}/>
+                      <Input value={this.state.customDataInputs[inputKey].value} placeholder="Value (for example, «Red»)" style={{flex: 1}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], value: e.target.value} }})}}/>
                     </FormGroup>
                   )
                 }
