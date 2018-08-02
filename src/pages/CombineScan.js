@@ -53,7 +53,7 @@ class CombineScan extends Component {
     var customDataJson = JSON.stringify(customData);*/
     this.props.passageInstance.combineProducts(productPartsObject, this.state.name, this.state.description, this.state.latitude.toString(), this.state.longitude.toString(), {from: this.props.web3Accounts[0], gas:1000000})
       .then((result) => {
-        // product created! ... but we use an event watcher to show the success message, so nothing actuelly happens here after we create a product
+        // product created! ... but we use an event watcher to show the success message, so nothing actually happens here after we create a product
       })
   }
 

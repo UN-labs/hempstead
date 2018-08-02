@@ -95,7 +95,7 @@ class App extends Component {
         <Notifications/>
         <Navbar color="faded" light style={{paddingTop: "1em", paddingBottom:"2em", backgroundColor: bodyColor}} expand="md">
           <Container>
-            <Link to='/'><img alt="Logo Trace" style={{width:"130px", marginRight: "20px"}} src="/logo-black.svg"/></Link>
+            <Link to='/'><img alt="Hempstead Logo" style={{width:"130px", marginRight: "20px"}} src="/logo-small.png"/></Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
@@ -116,7 +116,7 @@ class App extends Component {
         </div>
         <div style={{padding: "2em 0", color:"white", backgroundColor: "#000000"}}>
           <Container>
-            © 2018 Trace
+            © 2018 Hempstead
           </Container>
         </div>
       </div>
