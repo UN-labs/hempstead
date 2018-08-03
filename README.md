@@ -1,35 +1,35 @@
-![logo](https://user-images.githubusercontent.com/8457808/38818082-db3aea62-4167-11e8-8e59-7af47131c087.png)
+![logo](public/logo-small.png)
 
-# Trace
+# Hempstead
 
 > A transparent supply chain management platform with end users in mind.
 
-Trace is a decentralized application based on the Ethereum blockchain aiming to
+Hempstead is a decentralized application based on the Ethereum blockchain aiming to
 let consumers see the data behind the products they buy every day. It currently 
 allows industry experts to add products to the app, as well as create certifications
 that can be added to products. A mobile companion app (not developed yet) would 
-allow scanning Trace QR codes placed on the actual products to see the data
+allow scanning Hempstead QR codes placed on the actual products to see the data
 on-premise (e.g. at the grocery store).
 
 Keep in mind that **this is a proof of concept**. It is *not* production ready by any means. However, we do invite you to play around with the project and use it as you see fit. There are some rough edges, so we definitely appreciate your help in improving the platform.
 
-This project was developed under the supervision of Bessam Abdulrazak, director of the [Ambient Intelligence Lab](https://ami.usherbrooke.ca/welcome/en-lab/) at Université de Sherbrooke.
+This project was forked from gituhub repo https://github.com/maximevaillancourt/trace.
 
 Made using the Truffle toolkit, React.js, Redux, and Webpack.
 
-Logo design by [Laurence Mailhiot](https://twitter.com/mailhiotlaur).
+Logo design by Eric Porper.
 
 ## Screenshot
 
-![scrot](https://user-images.githubusercontent.com/8457808/38819232-d35aed1e-4168-11e8-90e7-1d74fe726729.png)
+![scrot](public/Hempstead-Screenshot.png)
 
 ## Installing / Getting started
 
 0. Clone the repo:
 
     ```shell
-    git clone https://github.com/maximevaillancourt/trace.git
-    cd trace
+    git clone git@github.com:UnspecifiedLLC/hempstead.git
+    cd hempstead
     ```
     
 1. Install the Truffle toolkit globally and install project dependencies:
@@ -58,7 +58,13 @@ Logo design by [Laurence Mailhiot](https://twitter.com/mailhiotlaur).
     npm run start
     ```
 
-A browser window should then open automatically at `http://localhost:3000` (or whatever port you set manually).
+A browser window should then open automatically at `http://localhost:3000` (or whatever port you set manually). It might say in the browser window "Waiting for Web3..."  If it does, see steps 5-6.
+
+5.  If you don't already have Metamask, get it (https://metamask.io/).  In Metamask, Import Account (click on the button with the person and arrows in a circle next to the hamburger), using Private Keys. Copy a private key from the output of the Truffle Develop and paste it into the Private Key in Metamask.
+
+6.  Then, connect to your private network. Click the network chooser (it will likely say "Main Ethereum Network" at the top), and choose Custom RPC. In there, enter the URL in your truffle.js file (default in this repo is http://localhost:9545). Then click Save.
+
+7. You should be up and running now!
 
 ## Developing
 
@@ -100,6 +106,7 @@ For bug fixes, documentation changes, and small features:
 1. [Fork it](https://github.com/maximevaillancourt/trace/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)  
 3. Commit your changes (`git commit -am 'Add some feature'`)  
+   **NOTE: Please be sure that you have GPG Signing configured in GitHub (https://help.github.com/articles/signing-commits-using-gpg/)
 4. Push to the branch (`git push origin my-new-feature`)  
 5. Create a new Pull Request
 
@@ -107,8 +114,8 @@ For larger new features: do everything as above, but first also make contact wit
 
 ## Links
 
-- Repository: https://github.com/maximevaillancourt/trace
-- Issue tracker: https://github.com/maximevaillancourt/trace/issues
+- Repository: https://github.com/UnspecifiedLLC/hempstead
+- Issue tracker: https://github.com/UnspecifiedLLC/hempstead/issues
 - Related projects:
   - Provenance: http://provenance.org/
   - SCTS: https://github.com/AtrauraBlockchain/scts
