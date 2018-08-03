@@ -127,6 +127,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# add .DS_Store
+.DS_Store
+
 
 
 # End of https://www.gitignore.io/api/intellij,solidity
