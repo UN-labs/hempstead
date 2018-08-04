@@ -127,7 +127,7 @@ class App extends Component {
         textAlign: "center",
         padding: "1em"
       }}>
-        Waiting for web3...
+        Waiting for web3... are you signed in to Metamask?
       </div>      
     )
     return (

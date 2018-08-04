@@ -50,7 +50,7 @@ class MyProducts extends Component {
       return (
         <Link key={index} to={`/products/${product.id}`}>
           <div key={index}>
-            <b>{product.name || "Untitled product"}</b> &mdash; {product.description || "No description"}
+            <b>{product.name || "Untitled product"}</b>
             <hr/>
           </div>
         </Link>
